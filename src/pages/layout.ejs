@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" charset="utf8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+    <style>
+        .navigation {
+            background: #f4f5f6;
+            border-bottom: .1rem solid #d1d1d1;
+            display: block;
+            height: 5.2rem;
+            left: 0;
+            max-width: 100%;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 100%;
+            z-index: 1
+        }
+
+        .navigation .container {
+            padding-bottom: 0;
+            padding-top: 0
+        }
+
+        .navigation .navigation-list {
+            list-style: none;
+            margin-bottom: 0;
+            margin-right: 5rem
+        }
+
+        .navigation .navigation-item {
+            float: left;
+            margin-bottom: 0;
+            margin-left: 2.5rem;
+            position: relative
+        }
+
+        .navigation .img {
+            fill: #9b4dca;
+            height: 2rem;
+            position: relative;
+            top: .3rem
+        }
+
+        .navigation .navigation-title,
+        .navigation .title {
+            color: #606c76;
+            position: relative
+        }
+
+        .navigation .navigation-link,
+        .navigation .navigation-title,
+        .navigation .title {
+            display: inline;
+            font-size: 1.6rem;
+            line-height: 5.2rem;
+            padding: 0;
+            text-decoration: none
+        }
+
+        .navigation .navigation-link.active {
+            color: #606c76
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navigation">
+        <section class="container">
+            <a class="navigation-title" href="/">
+                &nbsp;<h1 class="title">useful services</h1></a>
+            <ul class="navigation-list float-right">
+            </ul>
+            </section>
+    </nav>
+    <div class="container">
+        <div class="row">&nbsp;</div>
+
+        <div class="row">
+            <div class="column">
+                <a href="/">useful-services</a>
+            </div>
+        </div>
+
+        <div class="row">&nbsp;</div>
+
+        <div class="row">
+            <div class="column">
+                <%- content %>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
