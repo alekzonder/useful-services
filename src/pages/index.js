@@ -20,10 +20,18 @@ module.exports = function initPages(service) {
 
     app.get('/ip', (req, res) => {
         pageIp(req, res)
-            .then(({content}) => {
-                res.send(
-                    layout({content})
-                );
+            .then(({template, data}) => {
+                let sendJson = typeof req.query.json !== 'undefined' ||
+                               data.useragent.family === 'curl';
+
+                if (sendJson) {
+                    res.json(data);
+                } else {
+                    let content = template(data);
+                    res.send(
+                        layout({content})
+                    );
+                }
             })
             .catch(res.serverError);
     });

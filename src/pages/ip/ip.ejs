@@ -1,7 +1,20 @@
 <div class="row">
     <div class="column">
-        <h3>your ip</h3>
+        <h4>your info&nbsp;&nbsp;<small><a href="/ip?json">&nbsp;json</a></small></h4>
 
+        <strong>ip</strong>&nbsp;&nbsp;<small><a href="#" onclick="copyToClipboard(event, '<%= ip %>')">copy</a></small>
         <pre><code><%= ip %></code></pre>
+
+        <strong>browser</strong>&nbsp;&nbsp;<small><a href="#" onclick="copyToClipboard(event, '<%= browser %>')">copy</a></small>
+        <pre><code><%= browser %></code></pre>
+
+        <strong>os</strong>&nbsp;&nbsp;<small><a href="#" onclick="copyToClipboard(event, '<%= os %>')">copy</a></small>
+        <pre><code><%= os %></code></pre>
+
+        <strong>device</strong>&nbsp;&nbsp;<small><a href="#" onclick="copyToClipboard(event, '<%= device %>')">copy</a></small>
+        <pre><code><%= device %></code></pre>
+
+        <strong>full useragent</strong>&nbsp;&nbsp;<small><a href="#" onclick="copyToClipboard(event, '<%= rawUseragent %>')">copy</a></small>
+        <pre><code><%= rawUseragent %></code></pre>
     </div>
 </div>

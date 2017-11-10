@@ -10,6 +10,8 @@ require('./init/di')(service)
 
         service.init();
 
+        service.app.use('/static', require('express').static(`${__dirname}/../public/static`));
+
         require('./pages')(service);
 
         return service.start();

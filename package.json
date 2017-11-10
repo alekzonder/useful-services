@@ -8,7 +8,8 @@
   "license": "MIT",
   "dependencies": {
     "@maf/rest-service": "^0.18.0",
-    "ejs": "^2.5.7"
+    "ejs": "^2.5.7",
+    "useragent": "^2.2.1"
   },
   "devDependencies": {
     "@maf/eslint-config": "^0.5.0"
