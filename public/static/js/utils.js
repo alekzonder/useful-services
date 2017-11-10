@@ -1,9 +1,11 @@
 function copyToClipboard(event, text) {
     if (event) {
         event.preventDefault();
+        event.stopPropagation();
     }
 
-    let tmp = document.createElement('input');
+    var tmp = document.createElement('input');
+
     document.documentElement.appendChild(tmp);
     tmp.value = text;
     tmp.focus();

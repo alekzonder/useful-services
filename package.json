@@ -12,6 +12,7 @@
     "useragent": "^2.2.1"
   },
   "devDependencies": {
-    "@maf/eslint-config": "^0.5.0"
+    "@maf/eslint-config": "^0.5.0",
+    "eslint-plugin-es5": "^1.1.0"
   }
 }

@@ -8,11 +8,13 @@ let pageIp = require('./ip');
 module.exports = function initPages(service) {
     let app = service.app;
 
+    let version = 1;
+
     app.get('/', (req, res) => {
         pageMain()
             .then(({content}) => {
                 res.send(
-                    layout({content})
+                    layout({content, version})
                 );
             })
             .catch(res.serverError);
@@ -29,7 +31,7 @@ module.exports = function initPages(service) {
                 } else {
                     let content = template(data);
                     res.send(
-                        layout({content})
+                        layout({content, version})
                     );
                 }
             })
