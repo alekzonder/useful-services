@@ -6,6 +6,9 @@
   "repository": "git@github.com:alekzonder/useful-services.git",
   "author": "alekzonder <alekzonder@gmail.com>",
   "license": "MIT",
+  "scripts": {
+      "start": "node index.js"
+  },
   "dependencies": {
     "@maf/rest-service": "^0.18.0",
     "ejs": "^2.5.7",
