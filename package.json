@@ -7,12 +7,13 @@
   "author": "alekzonder <alekzonder@gmail.com>",
   "license": "MIT",
   "scripts": {
-      "start": "node index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "@maf/rest-service": "^0.18.0",
     "ejs": "^2.5.7",
-    "useragent": "^2.2.1"
+    "useragent": "^2.2.1",
+    "whois": "^2.5.0"
   },
   "devDependencies": {
     "@maf/eslint-config": "^0.5.0",

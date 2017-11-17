@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="column">
+        <h4>
+            <a href="/whois">whois</a><% if (address) {%>&nbsp;"<%= address %>"<% } %>&nbsp;&nbsp;
+            <% if (address) {%><small><a href="/whois?json&address=<%= address %>">&nbsp;json</a></small><% } %>
+        </h4>
+
+        <form method="GET" action="/whois">
+            <fieldset>
+                <label for="address">address</label>
+                <input
+                    type="text"
+                    placeholder="for example, google.com"
+                    id="address"
+                    name="address"
+                    autocomplete="off"
+                    <% if (address) { %>
+                    value="<%= address %>"
+                    <% } %>
+                    >
+                <input class="button-primary" type="submit" value="Send">
+            <fieldset>
+        </form>
+
+        <% if (result) {%>
+        <pre><code><%= result %></code></pre>
+        <% } %>
+    </div>
+</div>

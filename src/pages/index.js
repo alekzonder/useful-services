@@ -4,6 +4,7 @@ let layout = require('./layout.ejs');
 
 let pageMain = require('./main');
 let pageIp = require('./ip');
+let pageWhois = require('./whois');
 
 function sendJsonMiddleware(req, res, next) {
     if (typeof req.query.json !== 'undefined') {
@@ -50,5 +51,19 @@ module.exports = function initPages(service) {
                 }
             })
             .catch(res.serverError);
+    });
+
+    app.get('/whois', sendJsonMiddleware, (req, res) => {
+        pageWhois(req, res)
+            .then(({template, data}) => {
+                if (req.sendJson) {
+                    res.json(data);
+                } else {
+                    let content = template(data);
+                    res.send(
+                        layout({content, version})
+                    );
+                }
+            });
     });
 };
